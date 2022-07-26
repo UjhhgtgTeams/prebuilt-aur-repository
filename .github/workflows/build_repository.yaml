@@ -6,7 +6,7 @@ on:
       - master
       - debug
   schedule:
-    - cron: "21 4 * * 0"
+    - cron: "0 2 * * *"
   workflow_dispatch:
 
 jobs:
@@ -21,8 +21,13 @@ jobs:
       uses: kopp/build-aur-packages@v1
       with:
         packages: >
-          azure-cli
           ton-git
+          alx-wol-dkms
+          aria2-fast
+          bun
+          cxxmatrix-git
+          telegram-desktop-bin
+          nerd-fonts-complete
         
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
