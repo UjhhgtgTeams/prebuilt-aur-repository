@@ -7,6 +7,7 @@ on:
       - debug
   schedule:
     - cron: "21 4 * * 0"
+  workflow_dispatch:
 
 jobs:
   build_repository:
@@ -21,22 +22,8 @@ jobs:
       with:
         packages: >
           azure-cli
-          conan
-          micronucleus-git
-          nanoflann
-          neovim-symlinks
-          nsis
-          onedrive-abraunegg
-          python-ipympl
-          python-pydub
-          jmtpfs
-          qtfm
-          skypeforlinux-stable-bin
-          srecord
-          vdhcoapp-bin
-          visual-studio-code-bin
-          xfig
-
+          ton-git
+        
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
     - name: Remove the current data from the release
@@ -51,8 +38,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: aurci2
-        name: aurci build ${{ github.run_number }} from ${{ steps.date.outputs.date }}
-        body: aurci build ${{ github.run_number }} from ${{ steps.date.outputs.date }}
+        name: Build ${{ github.run_number }} at ${{ steps.date.outputs.date }}
         files: |
           ${{ github.workspace }}/*
         draft: false
