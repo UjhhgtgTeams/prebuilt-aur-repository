@@ -16,18 +16,14 @@ jobs:
     - name: Get current time and date
       id: date
       run: echo "::set-output name=date::$(date +'%Y-%m-%d %H:%M')"
+      
+    - name: Add keyserver
+      run:  echo 'keyserver hkps://keys.openpgp.org' >> /etc/gnupg/gpg.conf 
 
     - name: Build Packages
       uses: kopp/build-aur-packages@v1
       with:
         packages: >
-         # ton-git
-         # alx-wol-dkms
-         # aria2-fast
-         # bun
-         # cxxmatrix-git
-         # telegram-desktop-bin
-         # nerd-fonts-complete
          linux-zen
          linux
          linux-mainline
