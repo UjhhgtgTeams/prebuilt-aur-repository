@@ -18,7 +18,7 @@ jobs:
       run: echo "::set-output name=date::$(date +'%Y-%m-%d %H:%M')"
       
     - name: Add keyserver
-      run:  echo 'keyserver hkps://keys.openpgp.org' >> /etc/gnupg/gpg.conf 
+      run:  echo 'keyserver hkps://keys.openpgp.org' >> ~/.gnupg/gpg.conf 
 
     - name: Build Packages
       uses: kopp/build-aur-packages@v1
