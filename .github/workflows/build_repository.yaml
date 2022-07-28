@@ -21,13 +21,17 @@ jobs:
       uses: kopp/build-aur-packages@v1
       with:
         packages: >
-          ton-git
-          alx-wol-dkms
-          aria2-fast
-          bun
-          cxxmatrix-git
-          telegram-desktop-bin
-          nerd-fonts-complete
+         # ton-git
+         # alx-wol-dkms
+         # aria2-fast
+         # bun
+         # cxxmatrix-git
+         # telegram-desktop-bin
+         # nerd-fonts-complete
+         linux-zen
+         linux
+         linux-mainline
+         linux-xanmod
         
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
