@@ -24,12 +24,10 @@ jobs:
       uses: kopp/build-aur-packages@v1
       with:
         packages: >
-         adwsteamgtk
-          amazon-corretto-19-bin
+          adwsteamgtk
           binggpt-desktop-bin
           blanket-git
           cambalache
-          cartridges-git
           deepin-wine-helper
           deepin-wine-wechat
           deepin-wine6-stable
@@ -51,23 +49,16 @@ jobs:
           icu71
           icu72-bin
           jd-gui-bin
-          jdk11-temurin
-          jdk17-temurin
           lib32-udis86-git
           libhandy-git
           libldap24
           libre-menu-editor
           libuiohook
-          linux-xanmod-linux-bin-x64v3
-          linux-xanmod-linux-headers-bin-x64v3
           linuxqq-nt-bwrap
           mathematica
           mcpelauncher-msa-ui-qt-git
-          metasploit-payload-creator
-          natapp
           nautilus-open-any-terminal-git
           nbtexplorer
-          newelle
           nitch-git
           noto-fonts-cjk-sc-vf
           ns-usbloader
@@ -98,7 +89,6 @@ jobs:
           whatip-git
           xmind
           yt-dlp-drop-in
-          zulu-jdk-fx-bin
 
           
     - name: List generated Files
