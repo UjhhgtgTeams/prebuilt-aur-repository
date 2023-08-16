@@ -1,11 +1,11 @@
-# aurci2
+# prebuilt-aur-repository
 
 This repository uses the github action
 [`kopp/build-aur-packages`](https://github.com/kopp/build-aur-packages)
 to build
 [AUR packages](https://aur.archlinux.org/)
 and provide the built packages as
-[release](https://github.com/kopp/aurci2/releases/tag/aurci2).
+[release](https://UjhhgtgTeams/prebuilt-aur-repository/releases/tag/aurci2).
 
 
 # Use this Repository with `pacman`
@@ -15,7 +15,7 @@ You can use these packages by adding the following to your `/etc/pacman.conf`:
 ```
 [aurci2]
 SigLevel = Optional TrustAll
-Server = https://github.com/kopp/aurci2/releases/download/aurci2
+Server = https://github.com/UjhhgtgTeams/prebuilt-aur-repository/releases/download/aurci2
 ```
 
 
