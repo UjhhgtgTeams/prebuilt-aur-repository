@@ -26,7 +26,6 @@ jobs:
         packages: >
           adwsteamgtk
           binggpt-desktop-bin
-          blanket-git
           cambalache
           deepin-wine-helper
           deepin-wine-wechat
